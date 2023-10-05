@@ -2,6 +2,9 @@
   "expo": {
     "scheme": "tamagui-app",
     "userInterfaceStyle": "automatic",
+    "experiments": {
+      "typedRoutes": true
+    },
     "splash": {
       "backgroundColor": "#ddffe2",
       "image": "./assets/splash.png",
