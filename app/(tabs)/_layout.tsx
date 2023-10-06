@@ -1,4 +1,5 @@
 import React from "react";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Home, Mail, Plus, User, User2, Users2 } from "@tamagui/lucide-icons";
 import { Tabs, useSegments } from "expo-router";
 import { useRouter } from "expo-router";
@@ -8,6 +9,7 @@ export default function TabsLayout() {
   const segment = useSegments();
   const router = useRouter();
   const hideTab = segment[segment.length - 1] === "add";
+  const insets = useSafeAreaInsets();
 
   return (
     <Tabs
@@ -16,12 +18,14 @@ export default function TabsLayout() {
         tabBarShowLabel: false,
         tabBarStyle: {
           display: hideTab ? "none" : "flex",
-          alignItems: "center"
+          alignItems: "center",
+          paddingBottom: insets.bottom + 10,
+          height: insets.bottom + 60
         }
       }}
     >
       <Tabs.Screen
-        name="home"
+        name="(home)"
         options={{
           tabBarIcon: ({ focused }) => (
             <View
@@ -29,10 +33,10 @@ export default function TabsLayout() {
               justifyContent="center"
               paddingTop="$4"
             >
-              <Home color={focused ? "red" : "black"} />
+              <Home color={focused ? "red" : "$color"} />
               <Paragraph
                 size="$1"
-                color={focused ? "red" : "black"}
+                color={focused ? "red" : "$color"}
               >
                 Home
               </Paragraph>
@@ -49,10 +53,10 @@ export default function TabsLayout() {
               justifyContent="center"
               paddingTop="$4"
             >
-              <Users2 color={focused ? "red" : "black"} />
+              <Users2 color={focused ? "red" : "$color"} />
               <Paragraph
                 size="$1"
-                color={focused ? "red" : "black"}
+                color={focused ? "red" : "$color"}
               >
                 Friends
               </Paragraph>
@@ -83,10 +87,10 @@ export default function TabsLayout() {
               justifyContent="center"
               paddingTop="$4"
             >
-              <Mail color={focused ? "red" : "black"} />
+              <Mail color={focused ? "red" : "$color"} />
               <Paragraph
                 size="$1"
-                color={focused ? "red" : "black"}
+                color={focused ? "red" : "$color"}
               >
                 Inbox
               </Paragraph>
@@ -103,10 +107,10 @@ export default function TabsLayout() {
               justifyContent="center"
               paddingTop="$4"
             >
-              <User2 color={focused ? "red" : "black"} />
+              <User2 color={focused ? "red" : "$color"} />
               <Paragraph
                 size="$1"
-                color={focused ? "red" : "black"}
+                color={focused ? "red" : "$color"}
               >
                 Profile
               </Paragraph>

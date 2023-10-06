@@ -32,10 +32,8 @@ export default function RootLayout() {
   return (
     <TamaguiProvider config={config}>
       <Suspense fallback={<Text>Loading...</Text>}>
-        <Theme name={colorScheme}>
-          <ThemeProvider
-            value={colorScheme === "light" ? DefaultTheme : DarkTheme}
-          >
+        <Theme name={"light"}>
+          <ThemeProvider value={DefaultTheme}>
             <View flex={1}>
               <Stack
                 screenOptions={{
