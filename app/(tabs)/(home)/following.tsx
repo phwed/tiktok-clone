@@ -5,9 +5,9 @@ import { Play } from "@tamagui/lucide-icons";
 import { ResizeMode, Video } from "expo-av";
 import { Paragraph, View } from "tamagui";
 
-export default function Home() {
+export default function Following() {
   const video = React.useRef(null);
-  const [isPlaying, setIsPlaying] = React.useState(false);
+  const [isPlaying, setIsPlaying] = React.useState(true);
 
   const togglePlay = () => {
     if (isPlaying) {
@@ -37,11 +37,11 @@ export default function Home() {
             width: "100%"
           }}
           source={{
-            uri: "https://assets.mixkit.co/videos/preview/mixkit-white-cat-lying-among-the-grasses-seen-up-close-22732-large.mp4"
+            uri: "https://assets.≈.co/videos/preview/mixkit-white-cat-lying-among-the-grasses-seen-up-close-22732-large.mp4"
           }}
           useNativeControls={false}
           resizeMode={ResizeMode.COVER}
-          shouldPlay={true}
+          shouldPlay={isPlaying}
           isLooping={true}
           // onPlaybackStatusUpdate={(status) => setStatus(() => status)}
         />
