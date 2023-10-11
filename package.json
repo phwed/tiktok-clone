@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@expo-google-fonts/outfit": "^0.2.3",
+    "@gorhom/bottom-sheet": "^4",
     "@react-navigation/material-top-tabs": "^6.6.4",
     "@tamagui/animations-react-native": "^1.61.3",
     "@tamagui/babel-plugin": "^1.61.3",
