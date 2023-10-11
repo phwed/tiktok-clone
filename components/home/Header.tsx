@@ -11,8 +11,6 @@ export default function Header() {
   const segment = useSegments();
   const router = useRouter();
 
-  console.log(segment[segment.length - 1]);
-
   const pages = [
     {
       name: "Explore",

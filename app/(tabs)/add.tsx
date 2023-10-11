@@ -7,7 +7,6 @@ import { Button, Paragraph, View, XStack } from "tamagui";
 export default function add() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
-  console.log(insets);
 
   return (
     <View

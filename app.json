@@ -10,6 +10,9 @@
       "image": "./assets/splash.png",
       "resizeMode": "contain"
     },
+    "android": {
+      "softwareKeyboardLayoutMode": "pan"
+    },
     "icon": "./assets/icon.png",
     "name": "tiktok-clone",
     "slug": "tiktok-clone"

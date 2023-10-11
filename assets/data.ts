@@ -10,9 +10,12 @@ export const data = [
     likes: 100,
     shares: 200,
     comments: 300,
+    saves: 5,
     songName: "song1",
     albumName: "album1",
-    artistName: "artist1"
+    artistName: "artist1",
+    liked: true,
+    saved: true
   },
   {
     id: 2,
@@ -23,9 +26,12 @@ export const data = [
     likes: 100,
     shares: 200,
     comments: 300,
+    saves: 1,
     songName: "song2",
     albumName: "album2",
-    artistName: "artist2"
+    artistName: "artist2",
+    liked: false,
+    saved: false
   },
   {
     id: 3,
@@ -33,11 +39,14 @@ export const data = [
     description: "description3",
     videoUrl:
       "https://assets.mixkit.co/videos/preview/mixkit-fire-in-front-of-tree-trunk-567-large.mp4",
-    likes: 100,
-    shares: 200,
-    comments: 300,
+    likes: 5,
+    shares: 10,
+    comments: 0,
+    saves: 10,
     songName: "song3",
     albumName: "album3",
-    artistName: "artist3"
+    artistName: "artist3",
+    liked: true,
+    saved: false
   }
 ];
